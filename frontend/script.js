@@ -1,78 +1,229 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+    /* =====================================================
+       MOBILE NAVIGATION
+       ===================================================== */
+
     const menuButton = document.getElementById("menuToggle");
     const menu = document.getElementById("navLinks");
 
-    // Mobile menu toggle
-    menuButton.addEventListener("click", () => {
-        menu.classList.toggle("active");
-    });
+    if (menuButton && menu) {
 
-    // Close menu when a link is clicked
-    const links = document.querySelectorAll("#navLinks a");
-    links.forEach(link => {
-        link.addEventListener("click", () => {
-            menu.classList.remove("active");
+        menuButton.addEventListener("click", () => {
+
+            const isOpen = menu.classList.toggle("active");
+
+            // Update accessibility attribute
+            menuButton.setAttribute("aria-expanded", isOpen);
+
+            // Update button label
+            menuButton.setAttribute(
+                "aria-label",
+                isOpen ? "Close navigation menu" : "Open navigation menu"
+            );
         });
-    });
 
-    // Contact form submission and validation
+
+        // Close menu when navigation link is clicked
+        const links = document.querySelectorAll("#navLinks a");
+
+        links.forEach(link => {
+
+            link.addEventListener("click", () => {
+
+                menu.classList.remove("active");
+
+                menuButton.setAttribute("aria-expanded", "false");
+
+                menuButton.setAttribute(
+                    "aria-label",
+                    "Open navigation menu"
+                );
+            });
+
+        });
+    }
+
+
+    /* =====================================================
+       CONTACT FORM
+       ===================================================== */
+
     const form = document.getElementById("contactForm");
+
     if (form) {
+
         form.addEventListener("submit", async (event) => {
+
             event.preventDefault();
+
+
+            /* ---------------------------------------------
+               GET FORM VALUES
+            --------------------------------------------- */
 
             const name = document.getElementById("name").value.trim();
             const email = document.getElementById("email").value.trim();
             const subject = document.getElementById("subject").value.trim();
             const message = document.getElementById("message").value.trim();
-            const formMessage = document.getElementById("formMessage");
 
-            formMessage.style.color = "#38bdf8";
-            formMessage.textContent = "Sending message...";
+            const formMessage = document.getElementById("formMessage");
+            const submitButton = document.getElementById("submitButton");
+
+
+            /* ---------------------------------------------
+               EMAIL VALIDATION
+            --------------------------------------------- */
+
+            const emailPattern =
+                /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+            /* ---------------------------------------------
+               BASIC VALIDATION
+            --------------------------------------------- */
 
             if (!name || !email || !subject || !message) {
+
+                formMessage.textContent =
+                    "Please fill in all fields.";
+
                 formMessage.style.color = "#ef4444";
-                formMessage.textContent = "Please fill in all fields.";
+
                 return;
             }
 
-            if (!email.includes("@") || !email.includes(".")) {
+
+            if (!emailPattern.test(email)) {
+
+                formMessage.textContent =
+                    "Please enter a valid email address.";
+
                 formMessage.style.color = "#ef4444";
-                formMessage.textContent = "Please enter a valid email address.";
+
                 return;
             }
+
 
             if (message.length < 10) {
+
+                formMessage.textContent =
+                    "Message must be at least 10 characters long.";
+
                 formMessage.style.color = "#ef4444";
-                formMessage.textContent = "Message must be at least 10 characters long.";
+
                 return;
             }
 
+
+            /* ---------------------------------------------
+               SHOW SENDING STATUS
+            --------------------------------------------- */
+
+            formMessage.textContent =
+                "Sending message...";
+
+            formMessage.style.color = "#2563eb";
+
+            submitButton.disabled = true;
+
+            submitButton.textContent = "Sending...";
+
+
+            /* ---------------------------------------------
+               BACKEND API
+            --------------------------------------------- */
+
+            const apiUrl =
+                "https://sabiya-portfolio-backend.onrender.com/api/contact";
+
+
             try {
-                // Change URL to your production backend URL once deployed (e.g., Render/Railway)
-                const apiUrl = "http://localhost:5000/api/contact";
-                
+
                 const response = await fetch(apiUrl, {
+
                     method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({ name, email, subject, message })
+
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+
+                    body: JSON.stringify({
+                        name,
+                        email,
+                        subject,
+                        message
+                    })
+
                 });
+
+
+                /* -----------------------------------------
+                   READ SERVER RESPONSE
+                ----------------------------------------- */
 
                 const data = await response.json();
 
-                if (response.ok || data.success) {
+
+                /* -----------------------------------------
+                   SUCCESS
+                ----------------------------------------- */
+
+                if (response.ok) {
+
+                    formMessage.textContent =
+                        "Message sent successfully! Thank you for connecting.";
+
                     formMessage.style.color = "#22c55e";
-                    formMessage.textContent = "Message sent successfully! Thank you for connecting.";
+
                     form.reset();
-                } else {
-                    formMessage.style.color = "#ef4444";
-                    formMessage.textContent = data.error || "Failed to send message. Please try again.";
+
                 }
+
+
+                /* -----------------------------------------
+                   SERVER ERROR
+                ----------------------------------------- */
+
+                else {
+
+                    formMessage.textContent =
+                        data.error ||
+                        "Failed to send message. Please try again.";
+
+                    formMessage.style.color = "#ef4444";
+                }
+
+
             } catch (error) {
-                console.error("Connection error:", error);
+
+                console.error(
+                    "Connection error:",
+                    error
+                );
+
+                formMessage.textContent =
+                    "Unable to connect to the backend server.";
+
                 formMessage.style.color = "#ef4444";
-                formMessage.textContent = "Unable to connect to the backend server.";
+
             }
+
+
+            /* ---------------------------------------------
+               RESTORE BUTTON
+            --------------------------------------------- */
+
+            finally {
+
+                submitButton.disabled = false;
+
+                submitButton.textContent =
+                    "Send Message";
+
+            }
+
         });
     }
+
 });

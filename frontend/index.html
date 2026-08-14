@@ -1,213 +1,675 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sabiya Shaikh | Full Stack Developer</title>
+
+    <meta
+        name="description"
+        content="Sabiya Shaikh - MCA student and aspiring software developer portfolio showcasing skills, education, projects, certifications and experience."
+    >
+
+    <title>Sabiya Shaikh | Developer Portfolio</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header>
-    <nav>
-        <h2>&lt;Sabiya /&gt;</h2>
-        <button id="menuToggle" aria-label="Toggle Menu">☰</button>
-        <ul id="navLinks">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#certifications">Certifications</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+    <!-- ================= HEADER ================= -->
+    <header>
+        <nav aria-label="Main Navigation">
 
-<main>
-    <section id="home" class="home">
-        <div class="home-content">
-            <span class="greeting">Hello, I'm</span>
-            <h1>Sabiya Shaikh</h1>
-            <h2>Aspiring Full-Stack Software Developer</h2>
-            <p>
-                I am an MCA student and BCA graduate with a deep passion for clean code, 
-                problem-solving, and building practical, impactful web applications from frontend to database.
-            </p>
-            <div class="home-buttons">
-                <a href="#projects" class="button">View Projects</a>
-                <a href="#contact" class="button second">Contact Me</a>
-                <a href="resume/Sabiya_shaikh_Resume.pdf" class="button accent" target="_blank">Download Resume</a>
-            </div>
-        </div>
-        <div class="home-img-wrapper">
-            <img src="images/profile.jpg" alt="Sabiya Shaikh Profile Picture">
-        </div>
-    </section>
+            <a href="#home" class="logo">
+                Sabiya Shaikh
+            </a>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <div class="about-card">
-            <p>
-                I am <strong>Sabiya Shaikh</strong>, a BCA graduate (CGPA 8.42) currently pursuing my Master of Computer Applications (MCA) at Nutan Maharashtra Institute of Engineering and Technology, Pune University.
-            </p>
-            <p>
-                My technical foundation includes Python, Core Java, and SQL, alongside machine learning and NLP web tools like Flask. I am actively expanding my expertise into full-stack development using Node.js, Express.js, and MongoDB.
-            </p>
-            <p>
-                My ultimate goal is to evolve into a confident Software Engineer capable of architecting scalable, real-world solutions.
-            </p>
-        </div>
-    </section>
+            <button
+                id="menuToggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-controls="navLinks"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
 
-    <section id="skills">
-        <h2>Technical & Soft Skills</h2>
-        <div class="cards">
-            <div class="card">
-                <h3>Programming</h3>
-                <p>Python, Core Java</p>
-            </div>
-            <div class="card">
-                <h3>Web Development</h3>
-                <p>HTML5, CSS3, JavaScript (ES6+)</p>
-            </div>
-            <div class="card">
-                <h3>Database & Backend</h3>
-                <p>SQL, Node.js, Express.js, MongoDB</p>
-            </div>
-            <div class="card">
-                <h3>Tools & Platforms</h3>
-                <p>Git, GitHub, VS Code, MS Excel</p>
-            </div>
-            <div class="card">
-                <h3>Core Strengths</h3>
-                <p>Problem Solving, NLP, Machine Learning</p>
-            </div>
-            <div class="card">
-                <h3>Soft Skills</h3>
-                <p>Teamwork, Communication, Adaptability</p>
-            </div>
-        </div>
-    </section>
+            <ul id="navLinks" class="nav-links">
 
-    <section id="education">
-        <h2>Education</h2>
-        <div class="cards">
-            <div class="card">
-                <h3>Master of Computer Applications</h3>
-                <h4>NMIET, Pune University</h4>
-                <p>Status: Final Year - Appearing</p>
-            </div>
-            <div class="card">
-                <h3>Bachelor of Computer Applications</h3>
-                <h4>Pune University (2025)</h4>
-                <p>CGPA: 8.42 / 10 (Grade: A+)</p>
-            </div>
-            <div class="card">
-                <h3>Class XII (HSC)</h3>
-                <h4>Maharashtra Board (2022)</h4>
-                <p>Percentage: 72.67%</p>
-            </div>
-            <div class="card">
-                <h3>Class X (SSC)</h3>
-                <h4>Maharashtra Board (2020)</h4>
-                <p>Percentage: 81.20%</p>
-            </div>
-        </div>
-    </section>
+                <li>
+                    <a href="#home">Home</a>
+                </li>
 
-    <section id="projects">
-        <h2>Featured Projects</h2>
-        <div class="cards">
-            <div class="card project-card">
-                <h3>AI Powered Email Spam Classifier</h3>
-                <p>An intelligent detection system classifying emails using machine learning and NLP pipelines.</p>
-                <p class="tech-stack"><span>Python</span> <span>NLP</span> <span>Flask</span> <span>Machine Learning</span></p>
-                <a href="https://github.com" target="_blank">Source Code →</a>
-            </div>
-            <div class="card project-card">
-                <h3>Phishing Website Detection</h3>
-                <p>A smart safety web utility analyzing URL features to predict potential phishing threats in real-time.</p>
-                <p class="tech-stack"><span>Python</span> <span>Flask</span> <span>HTML/CSS</span></p>
-                <a href="https://github.com" target="_blank">Source Code →</a>
-            </div>
-            <div class="card project-card">
-                <h3>Full-Stack Developer Portfolio</h3>
-                <p>A fully responsive portfolio application backed by a Node/Express API and MongoDB storage.</p>
-                <p class="tech-stack"><span>Node.js</span> <span>Express</span> <span>MongoDB</span> <span>JavaScript</span></p>
-                <a href="https://github.com" target="_blank">Source Code →</a>
-            </div>
-        </div>
-    </section>
+                <li>
+                    <a href="#about">About</a>
+                </li>
 
-    <section id="certifications">
-        <h2>Certifications</h2>
-        <div class="cards">
-            <div class="card">
-                <h3>Prompt Engineering</h3>
-                <p>Issuer: Certicraft (2024)</p>
-                <a href="resume/Certicraft_certificate.pdf" target="_blank">View Credential →</a>
-            </div>
-            <div class="card">
-                <h3>Bajaj Finance CPBFI</h3>
-                <p>Issuer: Bajaj Finance (2024)</p>
-                <a href="#contact">Inquire →</a>
-            </div>
-        </div>
-    </section>
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
 
-    <section id="experience">
-        <h2>Experience</h2>
-        <div class="card single-card">
-            <h3>Full Stack & Web Development Intern</h3>
-            <h4>Quillance Infotech Pvt. Ltd.</h4>
-            <span class="date-badge">August 2026 - October 2026</span>
-            <p>
-                Building an end-to-end full-stack web project covering frontend responsiveness, 
-                Express API routing, asynchronous data handling, validation, and cloud deployment pipelines.
-            </p>
-        </div>
-    </section>
+                <li>
+                    <a href="#education">Education</a>
+                </li>
 
-    <section id="contact">
-        <h2>Get In Touch</h2>
-        <div class="contact-grid">
-            <div class="contact-info">
-                <h3>Let's build something great together.</h3>
-                <p>Have a question, an internship opportunity, or want to talk tech? Drop a message!</p>
-                <p><strong>Email:</strong> shaikhsabiya635@gmail.com</p>
-                <p><strong>GitHub:</strong> <a href="https://github.com/Sabiya1304" target="_blank">Sabiya1304</a></p>
-                <p><strong>LinkedIn:</strong> <a href="https://linkedin.com" target="_blank">Sabiya Shaikh</a></p>
-            </div>
-            <form id="contactForm">
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" placeholder="Sabiya Shaikh" required>
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+
+                <li>
+                    <a href="#certifications">Certifications</a>
+                </li>
+
+                <li>
+                    <a href="#experience">Experience</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- ================= HOME ================= -->
+        <section id="home" class="home">
+
+            <div class="home-content">
+
+                <p class="intro-text">
+                    Hello, I'm
+                </p>
+
+                <h1>
+                    Sabiya Shaikh
+                </h1>
+
+                <h2>
+                    Aspiring Software Developer
+                </h2>
+
+                <p>
+                    I am an MCA student and BCA graduate with a passion for
+                    software development and web development. I enjoy solving
+                    problems, learning new technologies, and building practical
+                    projects.
+                </p>
+
+                <div class="home-buttons">
+
+                    <a href="#projects" class="button">
+                        View Projects
+                    </a>
+
+                    <a href="#contact" class="button second">
+                        Contact Me
+                    </a>
+
+                    <a
+                        href="resume/Sabiya_shaikh_Resume.pdf"
+                        class="button"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Download Resume
+                    </a>
+
                 </div>
-                <div class="form-group">
-                    <label for="email">Your Email</label>
-                    <input type="email" id="email" placeholder="name@example.com" required>
-                </div>
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" placeholder="Project Inquiry" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" rows="4" placeholder="Write your message here..." required></textarea>
-                </div>
-                <button type="submit" id="submitButton">Send Message</button>
-                <p id="formMessage"></p>
-            </form>
-        </div>
-    </section>
-</main>
 
-<footer>
-    <p>© 2026 Sabiya Shaikh. Built with Node.js, Express & MongoDB.</p>
-</footer>
+            </div>
 
-<script src="script.js"></script>
+
+            <div class="home-image">
+
+                <img
+                    src="resume/sabiya-img.png"
+                    alt="Sabiya Shaikh - Aspiring Software Developer"
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ABOUT ================= -->
+        <section id="about">
+
+            <h2>About Me</h2>
+
+            <p>
+                I am Sabiya Shaikh, a BCA graduate currently pursuing my MCA.
+                I am passionate about software development and web development,
+                with a strong interest in problem solving, logical thinking,
+                and continuous learning.
+            </p>
+
+            <p>
+                I have worked on projects involving Python, machine learning,
+                NLP, HTML, CSS, and Flask. I am currently strengthening my
+                Core Java skills while gaining practical experience in
+                full-stack web development.
+            </p>
+
+            <p>
+                My goal is to become a skilled, confident, and reliable
+                Software Developer who can build practical solutions and
+                contribute effectively to real-world software projects.
+            </p>
+
+        </section>
+
+        <!-- ================= SKILLS ================= -->
+        <section id="skills">
+
+            <h2>Skills</h2>
+
+            <div class="cards">
+
+                <article class="card">
+                    <h3>Programming</h3>
+                    <p>Python, Core Java</p>
+                </article>
+
+                <article class="card">
+                    <h3>Web Development</h3>
+                    <p>HTML, CSS, JavaScript</p>
+                </article>
+
+                <article class="card">
+                    <h3>Database</h3>
+                    <p>SQL, MongoDB</p>
+                </article>
+
+                <article class="card">
+                    <h3>Currently Learning</h3>
+                    <p>Node.js, Express.js, MongoDB</p>
+                </article>
+
+                <article class="card">
+                    <h3>Tools</h3>
+                    <p>Git, GitHub, VS Code, Excel</p>
+                </article>
+
+                <article class="card">
+                    <h3>Soft Skills</h3>
+                    <p>Problem Solving, Teamwork, Communication</p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= EDUCATION ================= -->
+        <section id="education">
+
+            <h2>Education</h2>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>
+                        Master of Computer Applications
+                    </h3>
+
+                    <p>
+                        <strong>College:</strong>
+                        Nutan Maharashtra Institute of Engineering and Technology
+                    </p>
+
+                    <p>
+                        <strong>University:</strong>
+                        Savitribai Phule Pune University
+                    </p>
+
+                    <p>
+                        <strong>Status:</strong>
+                        Pursuing
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>
+                        Bachelor of Computer Applications
+                    </h3>
+
+                    <p>
+                        <strong>University:</strong>
+                        Savitribai Phule Pune University
+                    </p>
+
+                    <p>
+                        <strong>Year:</strong>
+                        2025
+                    </p>
+
+                    <p>
+                        <strong>CGPA:</strong>
+                        8.42 / 10
+                    </p>
+
+                    <p>
+                        <strong>Grade:</strong>
+                        A+
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Class XII</h3>
+
+                    <p>
+                        <strong>Board:</strong>
+                        Maharashtra State Board
+                    </p>
+
+                    <p>
+                        <strong>Year:</strong>
+                        2022
+                    </p>
+
+                    <p>
+                        <strong>Percentage:</strong>
+                        72.67%
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Class X</h3>
+
+                    <p>
+                        <strong>Board:</strong>
+                        Maharashtra State Board
+                    </p>
+
+                    <p>
+                        <strong>Year:</strong>
+                        2020
+                    </p>
+
+                    <p>
+                        <strong>Percentage:</strong>
+                        81.20%
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROJECTS ================= -->
+        <section id="projects">
+
+            <h2>Projects</h2>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>
+                        AI Powered Email Spam Classifier
+                    </h3>
+
+                    <p>
+                        A spam detection system that classifies emails as spam
+                        or legitimate using machine learning and NLP.
+                    </p>
+
+                    <p>
+                        <strong>Technology:</strong>
+                        Python, Machine Learning, NLP, TF-IDF,
+                        Naive Bayes, Random Forest, Flask, HTML, CSS
+                    </p>
+
+                    <p>
+                        <strong>Features:</strong>
+                        Text processing, spam classification,
+                        and real-time prediction.
+                    </p>
+
+                    <a
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        GitHub
+                    </a>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>
+                        Phishing Website Detection
+                    </h3>
+
+                    <p>
+                        A machine learning project that detects potentially
+                        phishing websites based on URL features.
+                    </p>
+
+                    <p>
+                        <strong>Technology:</strong>
+                        Python, Machine Learning, HTML, CSS, Flask
+                    </p>
+
+                    <p>
+                        <strong>Features:</strong>
+                        URL analysis, phishing prediction,
+                        and web-based real-time prediction.
+                    </p>
+
+                    <a
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        GitHub
+                    </a>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>
+                        Complete Developer Portfolio Website
+                    </h3>
+
+                    <p>
+                        A responsive full-stack portfolio website created to
+                        present my education, skills, projects and experience.
+                    </p>
+
+                    <p>
+                        <strong>Technology:</strong>
+                        HTML, CSS, JavaScript, Node.js,
+                        Express.js, MongoDB
+                    </p>
+
+                    <p>
+                        <strong>Features:</strong>
+                        Responsive design, contact form,
+                        backend API, validation and database storage.
+                    </p>
+
+                    <a
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        GitHub
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CERTIFICATIONS ================= -->
+        <section id="certifications">
+
+            <h2>Certifications</h2>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>Prompt Engineering</h3>
+
+                    <p>
+                        <strong>Issuer:</strong>
+                        Certicraft
+                    </p>
+
+                    <p>
+                        <strong>Date:</strong>
+                        February 2024
+                    </p>
+
+                    <a
+                        href="resume/Certicraft_certificate.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View Certificate
+                    </a>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Bajaj Finance CPBFI</h3>
+
+                    <p>
+                        <strong>Issuer:</strong>
+                        Bajaj Finance
+                    </p>
+
+                    <p>
+                        <strong>Date:</strong>
+                        December 2024
+                    </p>
+
+                    <a
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View Certificate
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= EXPERIENCE ================= -->
+        <section id="experience">
+
+            <h2>Experience</h2>
+
+            <article class="card">
+
+                <h3>
+                    Full Stack & Web Development Intern
+                </h3>
+
+                <h4>
+                    Quillance Infotech Pvt. Ltd.
+                </h4>
+
+                <p>
+                    <strong>August 2026 - October 2026</strong>
+                </p>
+
+                <p>
+                    Gaining practical experience in frontend development,
+                    backend APIs, database integration, GitHub, testing,
+                    and deployment through an individual full-stack project.
+                </p>
+
+            </article>
+
+        </section>
+
+
+        <!-- ================= CONTACT ================= -->
+        <section id="contact">
+
+            <h2>Contact Me</h2>
+
+            <div class="contact">
+
+                <div class="contact-info">
+
+                    <h3>Let's Connect</h3>
+
+                    <p>
+                        <strong>Email:</strong>
+                        <a href="mailto:shaikhsabiya635@gmail.com">
+                            shaikhsabiya635@gmail.com
+                        </a>
+                    </p>
+
+                    <p>
+                        <strong>GitHub:</strong>
+                        <a
+                            href="https://github.com/Sabiya1304"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            GitHub Profile
+                        </a>
+                    </p>
+
+                    <p>
+                        <strong>LinkedIn:</strong>
+                        <a
+                            href="https://www.linkedin.com/in/sabiya-shaikh-569a94290/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            LinkedIn Profile
+                        </a>
+                    </p>
+
+                </div>
+
+
+                <form id="contactForm">
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your name"
+                            autocomplete="name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="subject">
+                            Subject
+                        </label>
+
+                        <input
+                            type="text"
+                            id="subject"
+                            name="subject"
+                            placeholder="Enter subject"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="message">
+                            Message
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="5"
+                            placeholder="Write your message..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        id="submitButton"
+                    >
+                        Send Message
+                    </button>
+
+                    <p
+                        id="formMessage"
+                        role="status"
+                        aria-live="polite"
+                    ></p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+
+        <p>
+            &copy; 2026 Sabiya Shaikh. All Rights Reserved.
+        </p>
+
+        <p>
+            Student Developer Portfolio
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
 </body>
+
 </html>
