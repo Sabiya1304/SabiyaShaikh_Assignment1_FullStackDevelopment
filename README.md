@@ -97,7 +97,6 @@ Create a `.env` file containing your MongoDB connection string and required envi
 
 Open `frontend/index.html` using **VS Code Live Server** or another local web server.
 
-> **Note:** Do not upload `.env` or any database credentials to GitHub.
 
 ## 🌐 Deployment
 
@@ -113,6 +112,8 @@ MCA Student | Aspiring Software Developer
 * GitHub: https://github.com/Sabiya1304
 * LinkedIn: https://www.linkedin.com/in/sabiya-shaikh-569a94290/
 * Email: shaikhsabiya635@gmail.com
+
+* Live Prokect Link: https://sabiya-shaikh-portfolio.netlify.app/
 
 ## 📄 Assignment
 
