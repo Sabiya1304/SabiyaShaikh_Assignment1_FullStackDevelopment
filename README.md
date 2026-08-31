@@ -113,7 +113,7 @@ MCA Student | Aspiring Software Developer
 * LinkedIn: https://www.linkedin.com/in/sabiya-shaikh-569a94290/
 * Email: shaikhsabiya635@gmail.com
 
-* Live Prokect Link: https://sabiya-shaikh-portfolio.netlify.app/
+* Live Project Link: https://sabiya-shaikh-portfolio.netlify.app/
 
 ## 📄 Assignment
 
